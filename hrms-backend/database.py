@@ -15,9 +15,24 @@ NAME = os.getenv("DB_NAME")
 
 # Build the connection string
 # Format: mysql+pymysql://user:password@host:port/dbname
+# # for local pc
+# DATABASE_URL = f"mysql+pymysql://{USER}:{PASSWORD}@{HOST}:{PORT}/{NAME}"
+
+# for aivan hosted db
 DATABASE_URL = f"mysql+pymysql://{USER}:{PASSWORD}@{HOST}:{PORT}/{NAME}"
 
-engine = create_engine(DATABASE_URL)
+# engine = create_engine(DATABASE_URL)
+# Use connect_args to pass SSL configuration
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={
+        "ssl": {
+            'sslmode': 'REQUIRED',
+            "ca": "ca.pem"  # This points to the file in your root folder
+        }
+    }
+)
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 

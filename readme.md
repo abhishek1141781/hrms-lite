@@ -80,5 +80,7 @@ Employee IDs: IDs are assumed to be unique alphanumeric strings (e.g., EMP01) an
 
 ## URLs
 Live Application URL: [Your Hosted Frontend URL]
+
 Backend API URL: [Your Hosted Backend URL]
-GitHub Repository: [Your Repository Link]
+
+GitHub Repository: https://github.com/abhishek1141781/hrms-lite

@@ -3,11 +3,14 @@ from sqlalchemy.orm import Session
 from database import SessionLocal, engine
 import models
 
+# This looks at your models.py and creates the tables in Aiven
+models.Base.metadata.create_all(bind=engine)
+
 # This will create 50 employees and attendance for them
 def seed_data():
     db = SessionLocal()
     try:
-        for i in range(1, 51):
+        for i in range(1, 15):
             emp_id = f"EMP{i:03}"
             new_emp = models.Employee(
                 employee_id=emp_id,
