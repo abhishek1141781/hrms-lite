@@ -1,8 +1,8 @@
 .env
 venv/
 
-# Database SSL Certificates
-hrms-backend/ca.pem
+# # Database SSL Certificates
+# hrms-backend/ca.pem
 
 __pycache__/
 *.pyc
