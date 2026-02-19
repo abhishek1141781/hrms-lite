@@ -79,8 +79,8 @@ Data Integrity: Deleting an employee currently removes their record from the dir
 Employee IDs: IDs are assumed to be unique alphanumeric strings (e.g., EMP01) and are validated as unique by the backend.
 
 ## URLs
-Live Application URL: [Your Hosted Frontend URL]
+Live Application URL: https://hr-ap.netlify.app/
 
-Backend API URL: [Your Hosted Backend URL]
+Backend API URL: https://hrm-lite-n27m.onrender.com
 
 GitHub Repository: https://github.com/abhishek1141781/hrms-lite

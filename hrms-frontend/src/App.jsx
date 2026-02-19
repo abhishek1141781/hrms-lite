@@ -13,7 +13,8 @@ import {
 import { LoadingState, EmptyState } from './components/StatusMessages';
 import { ConfirmModal } from './components/ConfirmModal';
 
-const API_BASE = "http://127.0.0.1:8000";
+// const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://hrm-lite-n27m.onrender.com";
 
 function App() {
   const [activeTab, setActiveTab] = useState('employees');

@@ -9,7 +9,10 @@ app = FastAPI()
 # Enable CORS so your React app can talk to this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    # for local pc
+    # allow_origins=["*"],
+    allow_origins=["https://hrm-lite-n27m.onrender.com"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
