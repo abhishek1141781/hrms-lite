@@ -11,7 +11,7 @@ app.add_middleware(
     CORSMiddleware,
     # for local pc
     # allow_origins=["*"],
-    allow_origins=["https://hrm-lite-n27m.onrender.com"],
+    allow_origins=["https://hr-ap.netlify.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
