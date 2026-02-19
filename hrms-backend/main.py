@@ -6,12 +6,19 @@ from sqlalchemy.exc import IntegrityError
 
 app = FastAPI()
 
+# Exact matches only - no trailing slashes!
+origins = [
+    "https://hr-ap.netlify.app",    # Production
+    "http://localhost:5173",        # Local Vite default
+    "http://127.0.0.1:5173",       # Local alternative
+]
+
 # Enable CORS so your React app can talk to this API
 app.add_middleware(
     CORSMiddleware,
     # for local pc
     # allow_origins=["*"],
-    allow_origins=["https://hr-ap.netlify.app/"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
